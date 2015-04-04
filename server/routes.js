@@ -42,7 +42,7 @@ module.exports = function(app) {
     // Call the API
     http.request(options, function(response) {
 	    res.send(response);
-	};
+	});
   });
 
   app.get('/about', function(req, res) {
