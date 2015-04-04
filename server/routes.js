@@ -17,10 +17,12 @@ module.exports = function(app) {
 	method: 'GET'
     };
 
+    console.log(options.path);
+
     // Call the API
     http.request(options, function(response) {
 	res.send(response);
-    }).end();
+    });
   });
 
   app.get('/wolfram/search/:id', function(req, res) {
@@ -35,10 +37,12 @@ module.exports = function(app) {
         method: 'GET'
     };
 
+    console.log(options.path);
+
     // Call the API
     http.request(options, function(response) {
 	    res.send(response);
-	}).end();
+	};
   });
 
   app.get('/about', function(req, res) {
