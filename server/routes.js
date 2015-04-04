@@ -1,4 +1,5 @@
 var http = require('http');
+var request        = require("request");
 
 module.exports = function(app) {
 
@@ -10,19 +11,14 @@ module.exports = function(app) {
     console.log("Wiki!");
     var query = req.params.id;
     console.log(query);
-    url = "sandbox-search-api.herokuapp.com";
-    var options = {
-	host: url,
-	path: '/wikisearch?article='+query,
-	method: 'GET'
-    };
 
-    console.log(options.path);
+    request('https://sandbox-search-api.herokuapp.com/wikisearch?article='+query, 
+	    function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+		res.send(body) // Show the HTML for the Google homepage. 
+	    }
+     });
 
-    // Call the API
-    http.request(options, function(response) {
-	res.send(response);
-    });
   });
 
   app.get('/wolfram/search/:id', function(req, res) {
@@ -30,19 +26,12 @@ module.exports = function(app) {
     var query = req.params.id;
     console.log(query);
 
-    url= "sandbox-search-api.herokuapp.com";
-    var options = {
-        host: url,
-        path: '/wolframsearch?query='+query,
-        method: 'GET'
-    };
-
-    console.log(options.path);
-
-    // Call the API
-    http.request(options, function(response) {
-	    res.send(response);
-	});
+    request('https://sandbox-search-api.herokuapp.com/wolframsearch?query='+query,
+            function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+		res.send(body) // Show the HTML for the Google homepage.                             
+	    }
+    });
   });
 
   app.get('/about', function(req, res) {
