@@ -2,10 +2,7 @@ body {
   padding-top:30px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-}
-
-body div {
-  text-align: center;
+  height: 100%;
 }
 
 input[type="text"]{
@@ -13,29 +10,134 @@ input[type="text"]{
   line-height: 10px;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   padding: 10px 10px;
   line-height: 20px;
 }
 
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-
-div .content {
-  width: 600px;
-  font-size: 130%;
-}
-
-div a {
+a {
   color: #000000;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
 }
 
 .footer {
   font-size: 110%;
   padding-top: 75px;
+  text-align: center;
+}
+
+.home {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 130%;
+}
+
+.home a img {
+  display: block;
+  margin: auto;
+}
+
+.home div {
+  display: block;
+  margin: 0 auto;
+}
+
+.home div form {
+  text-align: center;
+}
+
+.home h3 {
+  text-align: center;
+}
+
+.home a img {
+  display: block;
+  margin: auto;
+}
+
+.result {
+  width: 80%;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 130%;
+}
+
+.result div {
+  display: block;
+  margin: 0 auto;
+}
+
+.result div form {
+  text-align: center;
+}
+
+.result h1 {
+  text-align: center;
+}
+
+.result a img {
+  display: block;
+  margin: auto;
+}
+
+.legoPlate {
+  width: 100%;
+  margin: auto;
+  font-size: 130%;
+  border: 3px solid #000;
+  padding: 10px;
+}
+
+.legoPlate div {
+  display: block;
+  margin: 0 auto;
+}
+
+.legoPlate h1 {
+  text-align: center;
+  border: 3px solid #000080;
+}
+
+.legoPlate a img {
+  display: block;
+  margin: auto;
+}
+
+.legoPlate table {
+  display: table;
+  padding: 5px;
+}
+
+.legoPlate table td {
+  width: 49%;
+  height:98%;
+  margin: 5px;
+  display: inline-block;
+  border: 3px solid #000080;
+}
+
+.legoPlate table td .card {
+  padding: 10px;
+}
+
+.legoPlate table td img {
+  width:95%;
+  height:auto;
+  display: block;
+  margin: auto;
+}
+
+.card div {
+  display: block;
+  margin: 0 auto;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card a img {
+  display: block;
+  margin: auto;
 }

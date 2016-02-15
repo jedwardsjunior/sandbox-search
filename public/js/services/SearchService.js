@@ -1,4 +1,4 @@
-// public/js/services/ResultService.js
+// public/js/services/SearchService.js
 angular.module('SearchService', [])
 
   .service('searchHelper', function() {
